@@ -19,7 +19,7 @@ CREATE TABLE videos(
   owner_id INT NOT NULL REFERENCES users(id)
 );
 
--- reaction_type VARCHAR(10)?
+-
 CREATE TABLE reactions(
   id SERIAL PRIMARY KEY,
   user_id INT NOT NULL REFERENCES users(id),
@@ -27,7 +27,7 @@ CREATE TABLE reactions(
   reaction_type VARCHAR(10)
 );
 
--- access_type TEXT ?
+
 CREATE TABLE playlists(
   id SERIAL PRIMARY KEY,
   author_id INT NOT NULL REFERENCES users(id),
@@ -40,7 +40,7 @@ CREATE TABLE playlists_video(
   video_id INT NOT NULL REFERENCES videos(id)
 );
 
--- reactions_count SERIAL?
+
 CREATE TABLE comments(
   id SERIAL PRIMARY KEY,
   user_id INT NOT NULL REFERENCES users(id),
